@@ -15,7 +15,7 @@ class Bloc with Validators {
 
 
 
-  // Retreive data from stream
+  // Retreive data from strea
  Stream<String> get email => _email.stream.transform(validateEmail);
   Stream<bool> get SubmitValid => Rx.combineLatest2(email, password, (a, b) => true);
   Stream<String>   get password => _password.stream.transform(ValidatePassword);
